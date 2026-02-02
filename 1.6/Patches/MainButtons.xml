@@ -830,25 +830,42 @@
 		</match>
 	</Operation>
 
+
+
 	<Operation Class="PatchOperationConditional" MayRequire="ferny.progressioneducation">
 		<success>Always</success>
 		<xpath>/Defs/MainButtonDef[defName="PE_Education"]/iconPath</xpath>
 		<nomatch Class="PatchOperationAdd">
 			<xpath>/Defs/MainButtonDef[defName="PE_Education"]</xpath>
 			<value>
-				<iconPath>UI/Buttons/MainButtons/Education</iconPath>
+				<iconPath>UI/Buttons/MainButtons/Classrooms</iconPath>
 			</value>
 		</nomatch>
 		<match Class="PatchOperationReplace">
 			<xpath>/Defs/MainButtonDef[defName="PE_Education"]/iconPath</xpath>
 			<value>
-				<iconPath>UI/Buttons/MainButtons/Education</iconPath>
+				<iconPath>UI/Buttons/MainButtons/Classrooms</iconPath>
 			</value>
 		</match>
 	</Operation>
 
 
-
+	<Operation Class="PatchOperationConditional" MayRequire="ShyGuySpirit.OutpostManager">
+		<success>Always</success>
+		<xpath>/Defs/MainButtonDef[defName="OutpostManager"]/iconPath</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/MainButtonDef[defName="OutpostManager"]</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/OutpostManager</iconPath>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/MainButtonDef[defName="OutpostManager"]/iconPath</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/OutpostManager</iconPath>
+			</value>
+		</match>
+	</Operation>
 
 
 </Patch>
