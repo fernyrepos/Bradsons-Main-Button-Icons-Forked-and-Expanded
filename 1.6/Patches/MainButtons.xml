@@ -868,4 +868,63 @@
 	</Operation>
 
 
+
+
+	<Operation Class="PatchOperationConditional" MayRequire="sk.dmbb">
+		<success>Always</success>
+		<xpath>/Defs/MainButtonDef[defName="DMMB_MainButtonsMenu"]/iconPath</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/MainButtonDef[defName="DMMB_MainButtonsMenu"]</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/ModButtons</iconPath>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/MainButtonDef[defName="DMMB_MainButtonsMenu"]/iconPath</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/ModButtons</iconPath>
+			</value>
+		</match>
+	</Operation>
+
+
+	<Operation Class="PatchOperationConditional" MayRequire="Officer.DrawIt">
+		<success>Always</success>
+		<xpath>/Defs/MainButtonDef[defName="DrawIt_Tab"]/iconPath</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/MainButtonDef[defName="DrawIt_Tab"]</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/Whiteboard</iconPath>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/MainButtonDef[defName="DrawIt_Tab"]/iconPath</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/Whiteboard</iconPath>
+			</value>
+		</match>
+	</Operation>
+
+
+	<Operation Class="PatchOperationConditional" MayRequire="Dubwise.DubsMintMenus">
+		<success>Always</success>
+		<xpath>/Defs/MainButtonDef[defName="MintGearMenu"]/iconPath</xpath>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/MainButtonDef[defName="MintGearMenu"]</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/MintGear</iconPath>
+			</value>
+		</nomatch>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/MainButtonDef[defName="MintGearMenu"]/iconPath</xpath>
+			<value>
+				<iconPath>UI/Buttons/MainButtons/MintGear</iconPath>
+			</value>
+		</match>
+	</Operation>
+
+
+
+
+
 </Patch>
